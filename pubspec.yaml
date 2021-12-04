@@ -1,7 +1,8 @@
 name: bluetooth_connector
 description: A new flutter plugin project.
 version: 0.0.1
-homepage:
+repository: https://github.com/jayjay21redball/bluetooth_connector
+homepage: https://github.com/jayjay21redball/bluetooth_connector
 
 environment:
   sdk: ">=2.12.0 <3.0.0"

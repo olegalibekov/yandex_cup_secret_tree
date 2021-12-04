@@ -4,7 +4,7 @@ A Flutter plugin to expose the features of Bluetooth Adapter for **Android only*
 
 ## Objective
 
-The primary purpose of this project was to communicate between flutter and paired Wear OS devices using Bluetooth.
+The primary purpose of this project was to communicate between flutter and paired Wear OS devices using Bluetooth. It is developed based on the code of [bluetoothadapter package](https://pub.dev/packages/bluetoothadapter) and the only ideal was to make it in compliance with null-safety.
 
 ## Main Features
 - Setting up a UUID from user end.
