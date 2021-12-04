@@ -4,4 +4,4 @@
 
 ## 0.0.2
 
-* Fixed build problem
+* Fixed build problem.
