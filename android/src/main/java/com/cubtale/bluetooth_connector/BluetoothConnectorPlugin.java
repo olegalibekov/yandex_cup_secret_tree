@@ -67,9 +67,9 @@ public class BluetoothConnectorPlugin implements FlutterPlugin, MethodCallHandle
 
   public static void registerWith(PluginRegistry.Registrar registrar) {
     context = registrar.context();
-    BluetoothadapterPlugin flutterbluetoothadapterPlugin = new BluetoothadapterPlugin();
+    BluetoothConnectorPlugin flutterbluetoothConnectorPlugin = new BluetoothConnectorPlugin();
     final MethodChannel channel = new MethodChannel(registrar.messenger(), "bluetoothadapter");
-    channel.setMethodCallHandler(flutterbluetoothadapterPlugin);
+    channel.setMethodCallHandler(flutterbluetoothConnectorPlugin);
     final EventChannel connectionStatusEventChannel = new EventChannel(registrar.messenger(), "connection_status");
     connectionStatusEventChannel.setStreamHandler(connectionStatusStreamHandler);
     final EventChannel recievedMessagesEventChannel = new EventChannel(registrar.messenger(),

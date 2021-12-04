@@ -23,11 +23,11 @@ The primary purpose of this project was to communicate between flutter and paire
 For a full example please check /example folder. Here are only the most important parts of the code to illustrate how to use the library.
 
     //Initiatinng the bluetooth adapter
-    Bluetoothadapter flutterbluetoothadapter = Bluetoothadapter();
+    BluetoothConnector flutterbluetoothconnector = BluetoothConnector();
 
 	//Listening to the connection status listener
 	String _connectionStatus = "NONE";
-    StreamSubscription _btConnectionStatusListener =flutterbluetoothadapter.connectionStatus().listen((dynamic status) {
+    StreamSubscription _btConnectionStatusListener =flutterbluetoothconnector.connectionStatus().listen((dynamic status) {
       setState(() {
         _connectionStatus = status.toString();
       });
@@ -35,7 +35,7 @@ For a full example please check /example folder. Here are only the most importan
 
 	//Listening to the recieved messages
 	String _recievedMessage;
-    StreamSubscription _btReceivedMessageListener = flutterbluetoothadapter.receiveMessages().listen((dynamic newMessage) {
+    StreamSubscription _btReceivedMessageListener = flutterbluetoothconnector.receiveMessages().listen((dynamic newMessage) {
       setState(() {
         _recievedMessage = newMessage.toString();
       });
@@ -43,29 +43,29 @@ For a full example please check /example folder. Here are only the most importan
 
 #### Getting paired devices
 
-    List<BtDevice> devices = await flutterbluetoothadapter.getDevices();
+    List<BtDevice> devices = await flutterbluetoothconnector.getDevices();
 
 #### Getting paired device
 
-    await flutterbluetoothadapter.getDevice(deviceAddress);
+    await flutterbluetoothconnector.getDevice(deviceAddress);
 
 #### Starting BT server
 
-    await flutterbluetoothadapter.startServer();
+    await flutterbluetoothconnector.startServer();
 
 #### Starting BT client
 
-    flutterbluetoothadapter.startClient(devices.indexOf(element), true);
+    flutterbluetoothconnector.startClient(devices.indexOf(element), true);
 
 #### Sending message
 
-    flutterbluetoothadapter.sendMessage(messageString);
+    flutterbluetoothconnector.sendMessage(messageString);
 
 #### Check BT connection
-	await flutterbluetoothadapter.checkBluetooth(); //returns bool
+	await flutterbluetoothconnector.checkBluetooth(); //returns bool
 
 #### Set UUID
-	flutterbluetoothadapter.initBlutoothConnection(uuid);
+	flutterbluetoothconnector.initBlutoothConnection(uuid);
 
 ### Flutter Help
 
