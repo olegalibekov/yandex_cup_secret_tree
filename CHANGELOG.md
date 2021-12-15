@@ -1,7 +1,11 @@
-## 0.0.1
+## 0.0.3
 
-* TODO: Describe initial release.
+* Fixed gradle version.
 
 ## 0.0.2
 
 * Fixed build problem.
+
+## 0.0.1
+
+* TODO: Describe initial release.
